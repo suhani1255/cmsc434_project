@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  font-family: Arial, sans-serif;
+}
+
+.app-frame {
+  width: 375px;
+  height: 667px;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen {
+  flex: 1;
+  background-color: pink;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.screen h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+
+.screen p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: navy;
+  color: white;
+  height: 60px;
+}
+
+.tab {
+  flex: 1;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 0.8rem;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+}
+
+.tab:hover {
+  background-color: #0044aa;
+}
