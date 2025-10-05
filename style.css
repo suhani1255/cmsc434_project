@@ -26,7 +26,6 @@ body {
 }
 
 .screen h1 {
-  text-align: center;
   font-size: 1.5rem;
   margin-top: 5px;
 }
@@ -37,7 +36,48 @@ body {
   margin-bottom: 15px;
 }
 
+/* --- Bottom Navigation Icons --- */
+.tab {
+  flex: 1;
+  border: none;
+  background: none;
+  color: #ffd700;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 3px;
+  filter: brightness(0) saturate(100%) invert(82%) sepia(96%) saturate(753%) hue-rotate(1deg) brightness(101%) contrast(102%);
+}
+
+.tab.active {
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+}
+
+.tab.active .nav-icon {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+}
+
 .bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: navy;
+  color: white;
+  height: 70px;
+}
+
+/* .bottom-nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -64,7 +104,7 @@ body {
 
 .tab:hover {
   background-color: #0044aa;
-}
+} */
 
 /*Tab 2 rules*/
 /* Top-left text */
@@ -233,4 +273,68 @@ body {
 .radio-group label {
   font-size: 1rem;
   cursor: pointer;
+}
+
+/* TAB 6 - To Do List */
+
+#todo-screen {
+  background-color: pink;
+  padding: 15px 10px 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+#todo-screen h1 {
+  margin: 0 0 15px 5px;
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+.todo-input {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px; 
+}
+
+.todo-input input {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.todo-input button {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+#taskList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#taskList li {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+#taskList li.completed {
+  background-color: gray;
+  color: white;
+  text-decoration: line-through;
+}
+
+.task-btns {
+  display: flex;
+}
+
+.task-btns button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
 }
