@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <div class="app-frame">
+        <div class="screen" id="text-screen">
+            <!-- Top-left text -->
+            <h1 class="colors-title">-User Profile-</h1>
+            <div class="profile-card">
+                <h2><img class="smile" src="smile.webp" onclick="document.getElementById('profileAlert').classList.remove('hidden')"></h2>
+                <div class="profile-name">Simley J. Smile</div>
+                <div id="profileAlert" class="profile-alert hidden" role="alert" aria-live="assertive">
+                    <strong>Warning!</strong>&nbsp;Do not click on the profile image.
+                    <button class="alert-close" aria-label="Close"
+                        onclick="document.getElementById('profileAlert').classList.add('hidden')">×</button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <nav class="bottom-nav">
+           <button class="tab" onclick="location.href='index.html'">Text</button>
+            <button class="tab" onclick="location.href='tab2.html'">LR</button>
+            <button class="tab" onclick="location.href='tab3.html'">Colors</button>
+            <button class="tab active" onclick="location.href='tab4.html'">Profile</button>
+            <button class="tab" onclick="location.href='tab5.html'">Choices</button>
+            <button class="tab" onclick="location.href='tab6.html'">ToDo</button>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

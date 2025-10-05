@@ -22,6 +22,7 @@ body {
   background-color: pink;
   padding: 10px;
   overflow-y: auto;
+  position: relative;
 }
 
 .screen h1 {
@@ -63,4 +64,173 @@ body {
 
 .tab:hover {
   background-color: #0044aa;
+}
+
+/*Tab 2 rules*/
+/* Top-left text */
+.top-left-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+}
+
+
+.bottom-right-text {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+/*TAB 3 rules*/
+
+/* Tab 3 precise positioning */
+#colors-screen {
+  position: relative;
+  
+}
+
+/* Title (top-left but slightly lower down) */
+.colors-title {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+/* Color bars */
+.line1,
+.line2 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+}
+
+/* Line 1: yellow on black */
+.line1 {
+  top: 110px;
+  /* distance from top */
+  background: black;
+  color: #ffd400;
+}
+
+/* Line 2: purple on yellow */
+.line2 {
+  top: 155px;
+  background: #ffd400;
+  color: purple;
+}
+
+
+/* TAB 4 rules */
+
+.smile {
+   display: block;
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Profile tab */
+#profile-screen { position: relative; }
+
+.profile-title {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  margin: 0;
+  font-weight: 800;
+  text-align: left;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;     
+}
+
+.profile-pic {
+  width: 160px;         
+  height: auto;
+  cursor: pointer;
+  display: block;
+}
+
+.profile-name {
+  margin-top: 8px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.profile-alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #e53935;
+  color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+}
+
+.alert-close {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.hidden { display: none; }
+
+
+
+
+/*TAB 5 rules 
+
+/* Choices tab layout */
+#choices-screen {
+  position: relative;
+}
+
+/* container to position form below heading */
+.choices-container {
+  margin-top: 70px;      /* pushes form below “-Choices-” */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;    /* left margin to align under heading */
+}
+
+/* stack radios vertically */
+.radio-group {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-group label {
+  font-size: 1rem;
+  cursor: pointer;
 }

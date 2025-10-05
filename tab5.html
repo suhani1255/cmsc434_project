@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <div class="app-frame">
+        <div class="screen" id="text-screen">
+            <!-- Top-left text -->
+            <h1 class="colors-title">-Choices-</h1>
+            <div class="choices-container">
+                <form>
+                    <fieldset class="radio-group">
+                        <legend><strong>Account # 1 type :</strong></legend>
+                        <label><input type="radio" name="Account" value="Savings account">Savings account </label>
+                        <label><input type="radio" name="Account" value="Checking account"> Checking account</label>
+                        <label><input type="radio" name="Account" value="Stock brokage account"> Stock brokage
+                            account</label>
+                    </fieldset>
+
+                    <label for="accounts"> <strong>Account # 2 type :</strong></label>
+                    <select name="accounts" id="account">
+                        <option value="Checking">Checking</option>
+                        <option value="Savings">Savings</option>
+                        <option value="Stock">Stock</option>
+                    </select>
+                    <br><br>
+                    <button type="button" class="primary-btn" onclick="showChoice()">Show my choice</button>
+
+                    <!-- Where we print the message -->
+                    <p id="choiceResult" class="choice-result" aria-live="polite"></p>
+
+
+                </form>
+            </div>
+
+
+        </div>
+
+        <nav class="bottom-nav">
+            <button class="tab" onclick="location.href='index.html'">Text</button>
+            <button class="tab" onclick="location.href='tab2.html'">LR</button>
+            <button class="tab" onclick="location.href='tab3.html'">Colors</button>
+            <button class="tab" onclick="location.href='tab4.html'">Profile</button>
+            <button class="tab active">Choices</button>
+            <button class="tab" onclick="location.href='tab6.html'">ToDo</button>
+        </nav>
+    </div>
+    <script>
+
+        function showChoice() {
+            const account1 = document.querySelector('input[name="Account"]:checked')?.value || '(none)';
+            const account2El = document.getElementById('account');
+            const account2 = account2El ? account2El.value : '(none)';
+            const msg = `You chose Account #1: ${account1} and Account #2: ${account2}.`;
+            document.getElementById('choiceResult').textContent = msg;
+        }
+    </script>
+</body>
+
+</html>
